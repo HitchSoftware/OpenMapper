@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class SettersInBaseClasses : AutoMapperSpecBase
+public class SettersInBaseClasses : OpenMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg =>
     {

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class EFCollections : AutoMapperSpecBase
+public class EFCollections : OpenMapperSpecBase
 {
     private Dest _dest;
 

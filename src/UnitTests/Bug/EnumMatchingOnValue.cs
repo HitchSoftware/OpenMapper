@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.Bug;
+namespace OpenMapper.UnitTests.Bug;
 
-public class EnumMatchingOnValue : AutoMapperSpecBase
+public class EnumMatchingOnValue : OpenMapperSpecBase
 {
     private SecondClass _result;
 

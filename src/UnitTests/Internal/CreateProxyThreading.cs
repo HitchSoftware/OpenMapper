@@ -1,6 +1,6 @@
-﻿using AutoMapper.Execution;
+﻿using OpenMapper.Execution;
 
-namespace AutoMapper.UnitTests;
+namespace OpenMapper.UnitTests;
 
 public class CreateProxyThreading
 {

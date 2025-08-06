@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests;
+﻿namespace OpenMapper.IntegrationTests;
 
 public class CustomProjectionStringToString : IntegrationTest<CustomProjectionStringToString.DatabaseInitializer>
 {

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class GenericCreateMapsWithCircularReference : AutoMapperSpecBase
+public class GenericCreateMapsWithCircularReference : OpenMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg =>
     {

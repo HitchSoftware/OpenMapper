@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests;
+namespace OpenMapper.UnitTests;
 
-public class When_a_source_child_object_is_null : AutoMapperSpecBase
+public class When_a_source_child_object_is_null : OpenMapperSpecBase
 {
     public class Source
     {
@@ -31,7 +31,7 @@ public class When_a_source_child_object_is_null : AutoMapperSpecBase
     }
 }
 
-public class When_the_destination_object_is_specified : AutoMapperSpecBase
+public class When_the_destination_object_is_specified : OpenMapperSpecBase
 {
     private Source _source;
     private Destination _originalDest;
@@ -76,7 +76,7 @@ public class When_the_destination_object_is_specified : AutoMapperSpecBase
     }
 }
    
-public class When_the_destination_object_is_specified_with_child_objects : AutoMapperSpecBase
+public class When_the_destination_object_is_specified_with_child_objects : OpenMapperSpecBase
 {
     private Source _source;
     private Destination _originalDest;
@@ -151,7 +151,7 @@ public class When_the_destination_object_is_specified_with_child_objects : AutoM
     }
 }
 
-public class When_the_destination_object_has_child_objects : AutoMapperSpecBase
+public class When_the_destination_object_has_child_objects : OpenMapperSpecBase
 {
     private Source _source;
     private Destination _originalDest;

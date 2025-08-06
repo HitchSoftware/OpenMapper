@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class ReverseMapAndReplaceMemberName : AutoMapperSpecBase
+public class ReverseMapAndReplaceMemberName : OpenMapperSpecBase
 {
     const string SomeId = "someId";
     const string SomeOtherId = "someOtherId";
@@ -43,7 +43,7 @@ public class ReverseMapAndReplaceMemberName : AutoMapperSpecBase
     }
 }
 
-public class ReverseMapAndReplaceMemberNameWithProfile : AutoMapperSpecBase
+public class ReverseMapAndReplaceMemberNameWithProfile : OpenMapperSpecBase
 {
     const string SomeId = "someId";
     const string SomeOtherId = "someOtherId";

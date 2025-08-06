@@ -1,8 +1,8 @@
-﻿namespace AutoMapper.UnitTests.Bug
+﻿namespace OpenMapper.UnitTests.Bug
 {
     namespace NullableConverterBug
     {
-        namespace AutoMapperIssue
+        namespace OpenMapperIssue
         {
             public class TestProblem
             {

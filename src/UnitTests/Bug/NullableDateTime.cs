@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class NullableDateTimeMapFromArray : AutoMapperSpecBase
+public class NullableDateTimeMapFromArray : OpenMapperSpecBase
 {
     public class Source
     {
@@ -30,7 +30,7 @@ public class NullableDateTimeMapFromArray : AutoMapperSpecBase
     public void Validate() => AssertConfigurationIsValid();
 }
 
-public class FromDateToNullableDateTime : AutoMapperSpecBase
+public class FromDateToNullableDateTime : OpenMapperSpecBase
 {
     Destination _destination;
     DateTime _date = new DateTime(1900, 1, 1);
@@ -64,7 +64,7 @@ public class FromDateToNullableDateTime : AutoMapperSpecBase
     }
 }
 
-public class NullableDateTime : AutoMapperSpecBase
+public class NullableDateTime : OpenMapperSpecBase
 {
     Destination _destination;
     DateTime _date = new DateTime(1900, 1, 1);

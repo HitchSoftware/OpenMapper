@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.Bug;
+namespace OpenMapper.UnitTests.Bug;
 
-public class DestinationValueInitializedByCtorBug : AutoMapperSpecBase
+public class DestinationValueInitializedByCtorBug : OpenMapperSpecBase
 {
     public class ItemToMapDto
     {
@@ -51,6 +51,6 @@ public class DestinationValueInitializedByCtorBug : AutoMapperSpecBase
         }
 
         Mapper.Map<List<ItemToMap>, List<ItemToMapDto>>(entities);
-        typeof(AutoMapperMappingException).ShouldNotBeThrownBy(() => Mapper.Map<List<ItemToMap>, List<ItemToMapDto>>(entities));
+        typeof(OpenMapperMappingException).ShouldNotBeThrownBy(() => Mapper.Map<List<ItemToMap>, List<ItemToMapDto>>(entities));
     }
 }

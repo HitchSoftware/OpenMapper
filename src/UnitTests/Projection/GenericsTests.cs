@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Projection;
-public class GenericsTests : AutoMapperSpecBase
+﻿namespace OpenMapper.UnitTests.Projection;
+public class GenericsTests : OpenMapperSpecBase
 {
     private Dest<string>[] _dests;
 

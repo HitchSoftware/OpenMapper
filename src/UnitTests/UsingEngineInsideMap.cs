@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests;
-public class UsingEngineInsideMap : AutoMapperSpecBase
+﻿namespace OpenMapper.UnitTests;
+public class UsingEngineInsideMap : OpenMapperSpecBase
 {
     private Dest _dest;
 
@@ -43,7 +43,7 @@ public class UsingEngineInsideMap : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_null_with_context_mapper : AutoMapperSpecBase
+public class When_mapping_null_with_context_mapper : OpenMapperSpecBase
 {
     class Source
     {

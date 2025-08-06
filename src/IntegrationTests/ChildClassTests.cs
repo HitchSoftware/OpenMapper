@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests
+﻿namespace OpenMapper.IntegrationTests
 {
     namespace ChildClassTests
     {
@@ -60,7 +60,7 @@
             });
 
             [Fact]
-            public void AutoMapperEFRelationsTest()
+            public void OpenMapperEFRelationsTest()
             {
                 using (var context = new TestContext())
                 {
@@ -93,7 +93,7 @@
                 }
             }
             [Fact]
-            public void MapShouldThrow() => new Action(() => Mapper.Map<SubDTO>(new Sub())).ShouldThrow<AutoMapperConfigurationException>().Message.ShouldBe("CreateProjection works with ProjectTo, not with Map.");
+            public void MapShouldThrow() => new Action(() => Mapper.Map<SubDTO>(new Sub())).ShouldThrow<OpenMapperConfigurationException>().Message.ShouldBe("CreateProjection works with ProjectTo, not with Map.");
         }
     }
 }

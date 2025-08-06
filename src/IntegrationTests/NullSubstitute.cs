@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests;
+﻿namespace OpenMapper.IntegrationTests;
 
 public class NullSubstitute : IntegrationTest<NullSubstitute.DatabaseInitializer>
 {

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class ProjectUsingTheQueriedEntity : AutoMapperSpecBase
+public class ProjectUsingTheQueriedEntity : OpenMapperSpecBase
 {
     private Destination _destination;
 

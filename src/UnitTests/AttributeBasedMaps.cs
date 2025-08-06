@@ -1,6 +1,6 @@
-﻿using AutoMapper.Configuration.Annotations;
+﻿using OpenMapper.Configuration.Annotations;
 
-namespace AutoMapper.UnitTests
+namespace OpenMapper.UnitTests
 {
     namespace AttributeBasedMaps
     {
@@ -11,7 +11,7 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(Source))]
+            [OpenMap(typeof(Source))]
             public class Dest
             {
                 public int Value { get; set; }
@@ -34,7 +34,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -45,7 +45,7 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(Source), ReverseMap = true)]
+            [OpenMap(typeof(Source), ReverseMap = true)]
             public class Dest
             {
                 public int Value { get; set; }
@@ -68,8 +68,8 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Dest, Source>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Dest, Source>());
             }
         }
 
@@ -80,7 +80,7 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(Source), ReverseMap = true)]
+            [OpenMap(typeof(Source), ReverseMap = true)]
             public class Destination
             {
                 [SourceMember("Value")]
@@ -103,8 +103,8 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Destination>());
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Destination, Source>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Destination>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Destination, Source>());
             }
         }
 
@@ -117,7 +117,7 @@ namespace AutoMapper.UnitTests
                 public string StringValue { get; set; }
             }
 
-            [AutoMap(typeof(Source<>), ReverseMap = true)]
+            [OpenMap(typeof(Source<>), ReverseMap = true)]
             public class Destination<T>
             {
                 [SourceMember("Value")]
@@ -144,8 +144,8 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid(typeof(Source<>), typeof(Destination<>)));
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid(typeof(Destination<>), typeof(Source<>)));
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid(typeof(Source<>), typeof(Destination<>)));
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid(typeof(Destination<>), typeof(Source<>)));
             }
         }
 
@@ -156,7 +156,7 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(Source))]
+            [OpenMap(typeof(Source))]
             public class Dest
             {
                 public int Value { get; set; }
@@ -183,7 +183,7 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(Source))]
+            [OpenMap(typeof(Source))]
             public class Dest
             {
                 [SourceMember("Value")]
@@ -211,7 +211,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -222,7 +222,7 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(Source))]
+            [OpenMap(typeof(Source))]
             public class Dest
             {
                 [SourceMember(nameof(Source.Value))]
@@ -250,7 +250,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -261,7 +261,7 @@ namespace AutoMapper.UnitTests
                 public string Value { get; set; }
             }
 
-            [AutoMap(typeof(Source))]
+            [OpenMap(typeof(Source))]
             public class Dest
             {
                 [NullSubstitute("Value")]
@@ -290,7 +290,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -301,7 +301,7 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(Source))]
+            [OpenMap(typeof(Source))]
             public class Dest
             {
                 [ValueResolver(typeof(MyValueResolver))]
@@ -337,7 +337,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -348,7 +348,7 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(Source))]
+            [OpenMap(typeof(Source))]
             public class Dest
             {
                 [ValueResolver(typeof(MyMemberValueResolver))]
@@ -385,7 +385,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -396,7 +396,7 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(Source))]
+            [OpenMap(typeof(Source))]
             public class Dest
             {
                 [ValueConverter(typeof(MyValueConverter))]
@@ -432,7 +432,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -443,7 +443,7 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(Source))]
+            [OpenMap(typeof(Source))]
             public class Dest
             {
                 [ValueConverter(typeof(MyValueConverter))]
@@ -480,7 +480,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -491,7 +491,7 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(Source))]
+            [OpenMap(typeof(Source))]
             public class Dest
             {
                 [Ignore]
@@ -523,7 +523,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Dest>());
             }
         }
 
@@ -539,7 +539,7 @@ namespace AutoMapper.UnitTests
                 public ChildSource Child { get; set; }
             }
 
-            [AutoMap(typeof(Source))]
+            [OpenMap(typeof(Source))]
             public class Destination
             {
                 public int Value { get; set; }
@@ -554,7 +554,7 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(ChildSource))]
+            [OpenMap(typeof(ChildSource))]
             public class ChildDestination
             {
                 public int Value { get; set; }
@@ -606,7 +606,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Destination>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Destination>());
             }
         }
 
@@ -636,7 +636,7 @@ namespace AutoMapper.UnitTests
                 }
             }
 
-            [AutoMap(typeof(Source))]
+            [OpenMap(typeof(Source))]
             public class Destination
             {
                 [MappingOrder(2)]
@@ -665,7 +665,7 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Destination>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<Source, Destination>());
             }
         }
 
@@ -676,7 +676,7 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(Source), ConstructUsingServiceLocator = true)]
+            [OpenMap(typeof(Source), ConstructUsingServiceLocator = true)]
             public class Dest
             {
                 private int _value;
@@ -734,7 +734,7 @@ namespace AutoMapper.UnitTests
                 }
             }
 
-            [AutoMap(typeof(Source), MaxDepth = 2)]
+            [OpenMap(typeof(Source), MaxDepth = 2)]
             public class Dest
             {
                 public int Level { get; set; }
@@ -778,7 +778,7 @@ namespace AutoMapper.UnitTests
                 public Parent Parent { get; set; }
             }
 
-            [AutoMap(typeof(Parent), PreserveReferences = true)]
+            [OpenMap(typeof(Parent), PreserveReferences = true)]
             public class ParentDto
             {
                 public int Id { get; set; }
@@ -787,7 +787,7 @@ namespace AutoMapper.UnitTests
                 public List<ChildDto> Children { get; set; }
             }
 
-            [AutoMap(typeof(Child))]
+            [OpenMap(typeof(Child))]
             public class ChildDto
             {
                 public int Id { get; set; }
@@ -845,10 +845,10 @@ namespace AutoMapper.UnitTests
             public class Foo { }
             public class FooBar : Foo { }
 
-            [AutoMap(typeof(Foo), IncludeAllDerived = true)]
+            [OpenMap(typeof(Foo), IncludeAllDerived = true)]
             public class FooDto { }
 
-            [AutoMap(typeof(FooBar))]
+            [OpenMap(typeof(FooBar))]
             public class FooBarDto : FooDto { }
 
             protected override MapperConfiguration CreateConfiguration() => new(cfg =>
@@ -872,7 +872,7 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(Source), TypeConverter = typeof(CustomConverter))]
+            [OpenMap(typeof(Source), TypeConverter = typeof(CustomConverter))]
             public class Dest
             {
                 public int OtherValue { get; set; }
@@ -915,8 +915,8 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(FirstSource))]
-            [AutoMap(typeof(SecondSource))]
+            [OpenMap(typeof(FirstSource))]
+            [OpenMap(typeof(SecondSource))]
             public class Dest
             {
                 public int Value { get; set; }
@@ -945,8 +945,8 @@ namespace AutoMapper.UnitTests
             [Fact]
             public void Should_validate_successfully()
             {
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<FirstSource, Dest>());
-                typeof(AutoMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<SecondSource, Dest>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<FirstSource, Dest>());
+                typeof(OpenMapperConfigurationException).ShouldNotBeThrownBy(() => AssertConfigurationIsValid<SecondSource, Dest>());
             }
         }
 
@@ -957,7 +957,7 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(Source), AsProxy = true)]
+            [OpenMap(typeof(Source), AsProxy = true)]
             public interface IDest
             {
                 int Value { get; set; }
@@ -984,7 +984,7 @@ namespace AutoMapper.UnitTests
                 public int Value { get; set; }
             }
 
-            [AutoMap(typeof(Source), AsProxy = false)]
+            [OpenMap(typeof(Source), AsProxy = false)]
             public interface IDest
             {
                 int Value { get; set; }
@@ -999,7 +999,7 @@ namespace AutoMapper.UnitTests
             public void Should_not_convert_to_interface()
             {
                 var source = new Source { Value = 15 };
-                Should.Throw<AutoMapperMappingException>(() => Mapper.Map<IDest>(source))
+                Should.Throw<OpenMapperMappingException>(() => Mapper.Map<IDest>(source))
                     .Message.ShouldStartWith("Cannot create interface " + typeof(IDest).FullName);
             }
         }

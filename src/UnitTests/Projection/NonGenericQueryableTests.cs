@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.Projection;
+﻿namespace OpenMapper.UnitTests.Projection;
 public class NonGenericQueryableTests
 {
     private MapperConfiguration _config;

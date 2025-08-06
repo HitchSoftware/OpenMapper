@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.Bug
+﻿namespace OpenMapper.UnitTests.Bug
 {
     namespace ContextValuesIncorrect
     {
@@ -14,7 +14,7 @@
             public int? Value2 { get; set; }
         }
 
-        public class When_conditionally_skipping_null_destination_values : AutoMapperSpecBase
+        public class When_conditionally_skipping_null_destination_values : OpenMapperSpecBase
         {
             private FooDto _destination;
 

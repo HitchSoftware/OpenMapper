@@ -1,8 +1,8 @@
-﻿namespace AutoMapper.UnitTests.Bug
+﻿namespace OpenMapper.UnitTests.Bug
 {
     namespace SetterOnlyBug
     {
-        public class MappingTests : AutoMapperSpecBase
+        public class MappingTests : OpenMapperSpecBase
         {
             protected override MapperConfiguration CreateConfiguration() => new(cfg =>
             {

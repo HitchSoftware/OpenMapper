@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Projection;
+﻿namespace OpenMapper.UnitTests.Projection;
 
-public class RecursiveQuery : AutoMapperSpecBase
+public class RecursiveQuery : OpenMapperSpecBase
 {
     class Source
     {

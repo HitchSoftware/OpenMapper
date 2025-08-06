@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class NullableResolveUsing : AutoMapperSpecBase
+public class NullableResolveUsing : OpenMapperSpecBase
 {
     private Destination _destination;
 

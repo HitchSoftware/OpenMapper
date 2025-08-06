@@ -1,6 +1,6 @@
-﻿using AutoMapper.Features;
+﻿using OpenMapper.Features;
 
-namespace AutoMapper.UnitTests;
+namespace OpenMapper.UnitTests;
 
 public class ConfigurationFeatureTest
 {

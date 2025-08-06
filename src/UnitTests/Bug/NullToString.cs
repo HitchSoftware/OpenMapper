@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class NullToString : AutoMapperSpecBase
+public class NullToString : OpenMapperSpecBase
 {
     private Destination _destination;
 

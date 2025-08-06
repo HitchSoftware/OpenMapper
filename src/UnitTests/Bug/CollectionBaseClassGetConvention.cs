@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class CollectionBaseClassGetConvention : AutoMapperSpecBase
+public class CollectionBaseClassGetConvention : OpenMapperSpecBase
 {
     Destination _destination;
     static int[] SomeCollection = new[] { 1, 2, 3 };

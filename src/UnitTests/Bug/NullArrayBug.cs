@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Bug;
-public class NullArrayBug : AutoMapperSpecBase
+﻿namespace OpenMapper.UnitTests.Bug;
+public class NullArrayBug : OpenMapperSpecBase
 {
     private static Source _source;
     private Destination _destination;

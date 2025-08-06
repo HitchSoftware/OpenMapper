@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.ExplicitExpansion;
+﻿namespace OpenMapper.IntegrationTests.ExplicitExpansion;
 
 public class ExpandCollections : IntegrationTest<ExpandCollections.DatabaseInitializer>
 {

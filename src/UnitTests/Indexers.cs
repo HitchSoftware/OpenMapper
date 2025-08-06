@@ -1,8 +1,8 @@
-namespace AutoMapper.UnitTests
+namespace OpenMapper.UnitTests
 {
     namespace Indexers
     {
-        public class When_mapping_to_a_destination_with_an_indexer_property : AutoMapperSpecBase
+        public class When_mapping_to_a_destination_with_an_indexer_property : OpenMapperSpecBase
         {
             private Destination _result;
 

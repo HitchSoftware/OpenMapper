@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class DeepCloningBug : AutoMapperSpecBase
+public class DeepCloningBug : OpenMapperSpecBase
 {
     private Outer _source;
     private Outer _dest;

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class OneSourceWithMultipleDestinationsAndPreserveReferences : AutoMapperSpecBase
+public class OneSourceWithMultipleDestinationsAndPreserveReferences : OpenMapperSpecBase
 {
     ClientModel _destination;
 

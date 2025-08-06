@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.MaxDepth;
+﻿namespace OpenMapper.IntegrationTests.MaxDepth;
 
 public class NavigationPropertySO : IntegrationTest<NavigationPropertySO.DatabaseInitializer>
 {

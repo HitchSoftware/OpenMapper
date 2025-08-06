@@ -1,8 +1,8 @@
-﻿using AutoMapper.Internal.Mappers;
+﻿using OpenMapper.Internal.Mappers;
 
-namespace AutoMapper.UnitTests.Mappers;
+namespace OpenMapper.UnitTests.Mappers;
 
-public class ConvertMapperTests : AutoMapperSpecBase
+public class ConvertMapperTests : OpenMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(c => { });
 

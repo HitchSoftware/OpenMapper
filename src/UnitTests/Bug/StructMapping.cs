@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class StructMapping : AutoMapperSpecBase
+public class StructMapping : OpenMapperSpecBase
 {
     private Destination _destination;
 
@@ -33,7 +33,7 @@ public class StructMapping : AutoMapperSpecBase
         _destination.Number.ShouldBe(23);
     }
 }
-public class DestinationStructMapping : AutoMapperSpecBase
+public class DestinationStructMapping : OpenMapperSpecBase
 {
     struct Source
     {

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class RecognizeDestinationPostfixes : AutoMapperSpecBase
+public class RecognizeDestinationPostfixes : OpenMapperSpecBase
 {
     class Person
     {

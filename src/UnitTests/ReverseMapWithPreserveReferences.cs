@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+﻿namespace OpenMapper.UnitTests;
 
-public class ReverseMapWithPreserveReferences : AutoMapperSpecBase
+public class ReverseMapWithPreserveReferences : OpenMapperSpecBase
 {
     UserDto _destination;
 

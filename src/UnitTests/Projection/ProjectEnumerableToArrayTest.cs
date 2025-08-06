@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.Projection;
+﻿namespace OpenMapper.UnitTests.Projection;
 public class ProjectEnumerableToArrayTest
 {
     private MapperConfiguration _config;

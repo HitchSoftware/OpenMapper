@@ -1,7 +1,7 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
 // Bug #511
-// https://github.com/AutoMapper/AutoMapper/issues/511
+// https://github.com/OpenMapper/OpenMapper/issues/511
 public class ReadOnlyCollectionMappingBug
 {
     class Source { public int X { get; set; } }

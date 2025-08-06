@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Projection;
-public class NonGenericConstructorTests : AutoMapperSpecBase
+﻿namespace OpenMapper.UnitTests.Projection;
+public class NonGenericConstructorTests : OpenMapperSpecBase
 {
     private Dest[] _dest;
 

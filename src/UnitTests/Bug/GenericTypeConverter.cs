@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class GenericTypeConverterWithTwoArguments : AutoMapperSpecBase
+public class GenericTypeConverterWithTwoArguments : OpenMapperSpecBase
 {
     List<object> _destination;
 
@@ -28,7 +28,7 @@ public class GenericTypeConverterWithTwoArguments : AutoMapperSpecBase
     }
 }
 
-public class GenericTypeConverter : AutoMapperSpecBase
+public class GenericTypeConverter : OpenMapperSpecBase
 {
     Destination<int> _destination;
     OtherDestination<int> _otherDestination;

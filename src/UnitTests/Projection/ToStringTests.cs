@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Projection;
-public class ToStringTests : AutoMapperSpecBase
+﻿namespace OpenMapper.UnitTests.Projection;
+public class ToStringTests : OpenMapperSpecBase
 {
     private Dest[] _dests;
 
@@ -38,7 +38,7 @@ public class ToStringTests : AutoMapperSpecBase
     }
 }
 
-public class NullableToStringTests : AutoMapperSpecBase
+public class NullableToStringTests : OpenMapperSpecBase
 {
     private Dest[] _dests;
 

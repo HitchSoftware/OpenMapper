@@ -1,8 +1,8 @@
-using static AutoMapper.UnitTests.Bug.MapFromClosureBug;
+using static OpenMapper.UnitTests.Bug.MapFromClosureBug;
 
-namespace AutoMapper.UnitTests;
+namespace OpenMapper.UnitTests;
 
-public class When_specifying_a_mapping_order_for_base_members : AutoMapperSpecBase
+public class When_specifying_a_mapping_order_for_base_members : OpenMapperSpecBase
 {
     Destination _destination;
 
@@ -60,7 +60,7 @@ public class When_specifying_a_mapping_order_for_base_members : AutoMapperSpecBa
     });
 }
 
-public class When_specifying_a_mapping_order : AutoMapperSpecBase
+public class When_specifying_a_mapping_order : OpenMapperSpecBase
 {
     private Destination _result;
 
@@ -111,7 +111,7 @@ public class When_specifying_a_mapping_order : AutoMapperSpecBase
         _result.Value1.ShouldBe(25);
     }
 }
-public class NullMappingOrderComesFirst : AutoMapperSpecBase
+public class NullMappingOrderComesFirst : OpenMapperSpecBase
 {
     public class Source
     {

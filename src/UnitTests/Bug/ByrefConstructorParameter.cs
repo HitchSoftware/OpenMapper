@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class ByrefConstructorParameter : AutoMapperSpecBase
+public class ByrefConstructorParameter : OpenMapperSpecBase
 {
     private Destination _destination;
 

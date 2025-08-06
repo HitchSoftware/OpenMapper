@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+﻿namespace OpenMapper.UnitTests;
 
-public class SourceValidationWithInheritance : AutoMapperSpecBase
+public class SourceValidationWithInheritance : OpenMapperSpecBase
 {
     public abstract class FormElement2
     {
@@ -61,7 +61,7 @@ public class SourceValidationWithInheritance : AutoMapperSpecBase
     public void Validate() => AssertConfigurationIsValid();
 }
 
-public class SourceValidationWithIgnore: AutoMapperSpecBase
+public class SourceValidationWithIgnore: OpenMapperSpecBase
 {
     public abstract class FormElement2
     {

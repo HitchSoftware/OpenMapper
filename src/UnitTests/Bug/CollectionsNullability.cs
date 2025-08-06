@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class CollectionsNullability : AutoMapperSpecBase
+public class CollectionsNullability : OpenMapperSpecBase
 {
     Holder _destination;
 

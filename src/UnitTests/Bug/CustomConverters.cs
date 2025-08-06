@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class NullableTypeConverter : AutoMapperSpecBase
+public class NullableTypeConverter : OpenMapperSpecBase
 {
     Destination _destination;
 
@@ -44,7 +44,7 @@ public class NullableTypeConverter : AutoMapperSpecBase
     }
 }
 
-public class CustomConverters : AutoMapperSpecBase
+public class CustomConverters : OpenMapperSpecBase
 {
     public class NullableIntToBoolConverter : ITypeConverter<int?, bool>
     {

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class NestedMappingProjectionsExplicitExpanding : AutoMapperSpecBase
+public class NestedMappingProjectionsExplicitExpanding : OpenMapperSpecBase
 {
     Fu _destination;
     int _propValue = 23;

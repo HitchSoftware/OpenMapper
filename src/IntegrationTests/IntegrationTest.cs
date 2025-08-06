@@ -1,6 +1,8 @@
-﻿namespace AutoMapper.IntegrationTests;
+﻿using OpenMapper.UnitTests;
 
-public abstract class IntegrationTest<TInitializer> : AutoMapperSpecBase, IAsyncLifetime where TInitializer : IInitializer, new()
+namespace OpenMapper.IntegrationTests;
+
+public abstract class IntegrationTest<TInitializer> : OpenMapperSpecBase, IAsyncLifetime where TInitializer : IInitializer, new()
 {
     Task IAsyncLifetime.DisposeAsync() => Task.CompletedTask;
     Task IAsyncLifetime.InitializeAsync() => new TInitializer().Migrate();

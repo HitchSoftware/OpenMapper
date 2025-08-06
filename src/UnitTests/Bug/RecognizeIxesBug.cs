@@ -1,8 +1,8 @@
-namespace AutoMapper.UnitTests.Bug
+namespace OpenMapper.UnitTests.Bug
 {
     namespace RecognizeIxesBug
     {
-        public class IxesTest : AutoMapperSpecBase
+        public class IxesTest : OpenMapperSpecBase
         {
             private Stuff _source;
             private StuffView _dest;

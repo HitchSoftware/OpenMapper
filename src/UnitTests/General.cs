@@ -1,4 +1,4 @@
-namespace AutoMapper.UnitTests
+namespace OpenMapper.UnitTests
 {
     namespace General
     {
@@ -27,7 +27,7 @@ namespace AutoMapper.UnitTests
             }
         }
 
-        public class When_mapping_a_null_model : AutoMapperSpecBase
+        public class When_mapping_a_null_model : OpenMapperSpecBase
         {
             private ModelDto _result;
 
@@ -54,7 +54,7 @@ namespace AutoMapper.UnitTests
             }
         }
 
-        public class When_mapping_a_dto_with_a_private_parameterless_constructor : AutoMapperSpecBase
+        public class When_mapping_a_dto_with_a_private_parameterless_constructor : OpenMapperSpecBase
         {
             private ModelDto _result;
 
@@ -93,7 +93,7 @@ namespace AutoMapper.UnitTests
             }
         }
 
-        public class When_mapping_to_a_dto_string_property_and_the_dto_type_is_not_a_string : AutoMapperSpecBase
+        public class When_mapping_to_a_dto_string_property_and_the_dto_type_is_not_a_string : OpenMapperSpecBase
         {
             private ModelDto _result;
 
@@ -130,7 +130,7 @@ namespace AutoMapper.UnitTests
             }
         }
 
-        public class When_mapping_dto_with_an_array_property : AutoMapperSpecBase
+        public class When_mapping_dto_with_an_array_property : OpenMapperSpecBase
         {
             private ModelDto _result;
 
@@ -192,11 +192,11 @@ namespace AutoMapper.UnitTests
                 var model = new ModelObject();
                 model.NullableDate = "Lorem Ipsum";
                 
-                typeof(AutoMapperMappingException).ShouldBeThrownBy(() => Mapper.Map<ModelObject, ModelDto>(model));
+                typeof(OpenMapperMappingException).ShouldBeThrownBy(() => Mapper.Map<ModelObject, ModelDto>(model));
             }
         }
 
-        public class When_mapping_an_array_of_model_objects : AutoMapperSpecBase
+        public class When_mapping_an_array_of_model_objects : OpenMapperSpecBase
         {
             private ModelObject[] _model;
             private ModelDto[] _dto;
@@ -237,7 +237,7 @@ namespace AutoMapper.UnitTests
             }
         }
 
-        public class When_mapping_a_List_of_model_objects : AutoMapperSpecBase
+        public class When_mapping_a_List_of_model_objects : OpenMapperSpecBase
         {
             private List<ModelObject> _model;
             private ModelDto[] _dto;
@@ -278,7 +278,7 @@ namespace AutoMapper.UnitTests
             }
         }
 
-        public class When_mapping_a_nullable_type_to_non_nullable_type : AutoMapperSpecBase
+        public class When_mapping_a_nullable_type_to_non_nullable_type : OpenMapperSpecBase
         {
             private ModelObject _model;
             private ModelDto _dto;
@@ -319,7 +319,7 @@ namespace AutoMapper.UnitTests
             }
         }
 
-        public class When_mapping_a_non_nullable_type_to_a_nullable_type : AutoMapperSpecBase
+        public class When_mapping_a_non_nullable_type_to_a_nullable_type : OpenMapperSpecBase
         {
             private ModelObject _model;
             private ModelDto _dto;
@@ -362,7 +362,7 @@ namespace AutoMapper.UnitTests
 
         }
 
-        public class When_mapping_a_nullable_type_to_a_nullable_type : AutoMapperSpecBase
+        public class When_mapping_a_nullable_type_to_a_nullable_type : OpenMapperSpecBase
         {
             private ModelObject _model;
             private ModelDto _dto;
@@ -406,7 +406,7 @@ namespace AutoMapper.UnitTests
 
         }
 
-        public class When_mapping_tuples : AutoMapperSpecBase
+        public class When_mapping_tuples : OpenMapperSpecBase
         {
             private Dest _dest;
 

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class InitializeNRE2 : AutoMapperSpecBase
+public class InitializeNRE2 : OpenMapperSpecBase
 {
     public interface IRes : IValueResolver<Source, Destination, int>
     {
@@ -33,7 +33,7 @@ public class InitializeNRE2 : AutoMapperSpecBase
 }
 
 
-public class InitializeNRE : AutoMapperSpecBase
+public class InitializeNRE : OpenMapperSpecBase
 {
     public class TestEntity
     {

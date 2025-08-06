@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class NullSubstituteInnerClass : AutoMapperSpecBase
+public class NullSubstituteInnerClass : OpenMapperSpecBase
 {
     private FooDto _destination;
 

@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Projection;
-public class ExplicitExpansion : AutoMapperSpecBase
+﻿namespace OpenMapper.UnitTests.Projection;
+public class ExplicitExpansion : OpenMapperSpecBase
 {
     private Dest[] _dests;
 

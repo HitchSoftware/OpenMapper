@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class ReadOnlyFieldMappingBug : AutoMapperSpecBase
+public class ReadOnlyFieldMappingBug : OpenMapperSpecBase
 {
     public class Source
     {

@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests;
+﻿namespace OpenMapper.UnitTests;
 
 public class When_using_a_member_name_replacer : NonValidatingSpecBase
 {

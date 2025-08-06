@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class Self_referencing_existing_destination : AutoMapperSpecBase
+public class Self_referencing_existing_destination : OpenMapperSpecBase
 {
     public class BaseType
     {
@@ -31,7 +31,7 @@ public class Self_referencing_existing_destination : AutoMapperSpecBase
     }
 }
 
-public class PreserveReferencesSameDestination : AutoMapperSpecBase
+public class PreserveReferencesSameDestination : OpenMapperSpecBase
 {
     public class DtoOne
     {

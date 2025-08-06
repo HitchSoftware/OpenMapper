@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class MemberListSourceAndForPath : AutoMapperSpecBase
+public class MemberListSourceAndForPath : OpenMapperSpecBase
 {
     bool _equal;
 

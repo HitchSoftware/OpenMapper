@@ -1,6 +1,6 @@
 ﻿using System.Reflection.Emit;
 
-namespace AutoMapper.UnitTests.Bug;
+namespace OpenMapper.UnitTests.Bug;
 
 public class NullConstructorParameterName
 {

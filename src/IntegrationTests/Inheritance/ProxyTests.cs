@@ -1,4 +1,6 @@
-﻿namespace AutoMapper.IntegrationTests.Inheritance;
+﻿using OpenMapper.UnitTests;
+
+namespace OpenMapper.IntegrationTests.Inheritance;
 
 public class ProxyTests : IAsyncLifetime
 {

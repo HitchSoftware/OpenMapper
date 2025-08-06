@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+﻿namespace OpenMapper.UnitTests;
 
-public class AddProfiles : AutoMapperSpecBase
+public class AddProfiles : OpenMapperSpecBase
 {
     public class Source { }
     public class Dest { }

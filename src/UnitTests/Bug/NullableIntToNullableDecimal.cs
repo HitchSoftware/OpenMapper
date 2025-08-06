@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class NullableIntToNullableDecimal : AutoMapperSpecBase
+public class NullableIntToNullableDecimal : OpenMapperSpecBase
 {
     private Destination _destination;
 
@@ -34,7 +34,7 @@ public class NullableIntToNullableDecimal : AutoMapperSpecBase
     }
 }
 
-public class NullNullableIntToNullableDecimal : AutoMapperSpecBase
+public class NullNullableIntToNullableDecimal : OpenMapperSpecBase
 {
     private Destination _destination;
 

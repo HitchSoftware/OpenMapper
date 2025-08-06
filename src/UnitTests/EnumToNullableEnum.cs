@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+﻿namespace OpenMapper.UnitTests;
 
-public class EnumToNullableEnum : AutoMapperSpecBase
+public class EnumToNullableEnum : OpenMapperSpecBase
 {
     Destination _destination;
     public enum SomeEnum { Foo, Bar }

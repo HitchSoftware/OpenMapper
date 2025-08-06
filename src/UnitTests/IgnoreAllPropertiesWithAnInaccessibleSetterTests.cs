@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests;
+﻿namespace OpenMapper.UnitTests;
 
 public class SomeSource
 {
@@ -17,7 +17,7 @@ public class DestinationBase
 public class IgnoreAllPropertiesWithAnInaccessibleSetterTests
 {
     [Fact]
-    public void AutoMapper_SimpleObject_IgnoresPrivateSettersInBaseClasses()
+    public void OpenMapper_SimpleObject_IgnoresPrivateSettersInBaseClasses()
     {
         // Arrange
         var config = new MapperConfiguration(cfg =>

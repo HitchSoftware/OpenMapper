@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class OneSourceWithMultipleDestinationsWithoutPR : AutoMapperSpecBase
+public class OneSourceWithMultipleDestinationsWithoutPR : OpenMapperSpecBase
 {
     ClientModel _destination;
 

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.MappingInheritance;
+﻿namespace OpenMapper.UnitTests.MappingInheritance;
 
-public class IncludeAllDerived : AutoMapperSpecBase
+public class IncludeAllDerived : OpenMapperSpecBase
 {
     public class A
     {

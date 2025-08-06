@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.Bug;
+namespace OpenMapper.UnitTests.Bug;
 
-public class MappingToAReadOnlyCollection : AutoMapperSpecBase
+public class MappingToAReadOnlyCollection : OpenMapperSpecBase
 {
     private Destination _destination;
 

@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class NullableEnums : AutoMapperSpecBase
+public class NullableEnums : OpenMapperSpecBase
 {
     public class Src { public EnumType? A { get; set; } }
     public class Dst { public EnumType? A { get; set; } }

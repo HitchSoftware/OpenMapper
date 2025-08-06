@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.IntegrationTests.Inheritance;
+﻿namespace OpenMapper.IntegrationTests.Inheritance;
 
 public class OverrideDestinationMappingsTest : IntegrationTest<OverrideDestinationMappingsTest.DatabaseInitializer>
 {

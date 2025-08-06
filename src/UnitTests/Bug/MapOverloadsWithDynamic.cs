@@ -1,8 +1,8 @@
 ﻿using System.Dynamic;
 
-namespace AutoMapper.UnitTests.Bug;
+namespace OpenMapper.UnitTests.Bug;
 
-public class MapOverloadsWithDynamic : AutoMapperSpecBase
+public class MapOverloadsWithDynamic : OpenMapperSpecBase
 {
     Settings _settings;
 

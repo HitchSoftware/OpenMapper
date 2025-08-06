@@ -1,0 +1,102 @@
+logsBucket: gs://my-logs-bucket
+
+options:
+  logging: LEGACY
+  automapSubstitutions: true    
+
+substitutions:
+  _TAG_NAME: '${TAG_NAME}'
+
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/HITCH_NUGET_SOURCE/versions/latest
+      env: NUGET_SOURCE
+    - versionName: projects/$PROJECT_ID/secrets/HITCH_NUGET_API_KEY/versions/latest
+      env: NUGET_API_KEY
+
+steps:
+  # 0) Create secure nuget.config
+  - name: 'bash'
+    id: 'generate-nuget-config'
+    entrypoint: 'bash'
+    secretEnv: ['NUGET_SOURCE', 'NUGET_API_KEY']
+    args:
+      - '-c'
+      - |
+        echo "Generating secure nuget.config..."
+        mkdir -p .nuget
+        cat <<EOF > .nuget/nuget.config
+        <?xml version="1.0" encoding="utf-8"?>
+        <configuration>
+          <packageSources>
+            <add key="hitchsoftware" value="$NUGET_SOURCE" />
+          </packageSources>
+          <packageSourceCredentials>
+            <hitchsoftware>
+              <add key="Username" value="AzureDevOps" />
+              <add key="ClearTextPassword" value="$NUGET_API_KEY" />
+            </hitchsoftware>
+          </packageSourceCredentials>
+        </configuration>
+        EOF
+
+  # 1) Restore using dynamic config
+  - name: 'mcr.microsoft.com/dotnet/sdk:9.0'
+    entrypoint: 'dotnet'
+    args: ['restore', 'OpenMapper.sln', '--configfile', '.nuget/nuget.config']
+
+  # 2) Build the solution
+  - name: 'mcr.microsoft.com/dotnet/sdk:9.0'
+    entrypoint: 'dotnet'
+    args: ['build', 'OpenMapper.sln', '--configuration', 'Release']
+
+  # 3) Inject the version into .csproj files
+  - name: 'bash'
+    id: 'inject-version'
+    entrypoint: 'bash'
+    env:
+      - "TAG_NAME=${TAG_NAME}"
+    args:
+      - '-c'
+      - |
+        echo "Injecting $TAG_NAME into all csproj files…"
+        find . -name '*.csproj' \! -path './.nuget/*' | while read proj; do
+          sed -i "s|<Version>.*</Version>|<Version>$TAG_NAME</Version>|" "$proj"
+          sed -i "s|<AssemblyVersion>.*</AssemblyVersion>|<AssemblyVersion>$TAG_NAME</AssemblyVersion>|" "$proj"
+          sed -i "s|<FileVersion>.*</FileVersion>|<FileVersion>$TAG_NAME</FileVersion>|" "$proj"
+        done
+
+  # 4) Pack all projects
+  - name: 'mcr.microsoft.com/dotnet/sdk:9.0'
+    id: 'dotnet-pack-all'
+    entrypoint: 'bash'
+    env:
+      - "TAG_NAME=${TAG_NAME}"
+    args:
+      - '-c'
+      - |
+        mkdir -p nupkgs
+        find . -name '*.csproj' \! -path './.nuget/*' | while read proj; do
+          echo "-> Packing $proj"
+          dotnet pack "$proj" \
+            --configuration Release \
+            --no-build \
+            --output nupkgs \
+            /p:Version=$TAG_NAME
+        done
+
+  # 5) Push nupkgs using injected nuget.config
+  - name: 'mcr.microsoft.com/dotnet/sdk:9.0'
+    id: 'nuget-push-all'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        for pkg in nupkgs/*.nupkg; do
+          echo "-> Pushing $pkg"
+          dotnet nuget push "$pkg" \
+            --source "hitchsoftware" \
+            --configfile .nuget/nuget.config \
+            --api-key AzureDevOps \
+            --skip-duplicate
+        done

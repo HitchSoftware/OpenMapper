@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests.Bug;
+namespace OpenMapper.UnitTests.Bug;
 
-public class MultipleInterfaceInheritance : AutoMapperSpecBase
+public class MultipleInterfaceInheritance : OpenMapperSpecBase
 {
     private ThingDto _thingDto;
 

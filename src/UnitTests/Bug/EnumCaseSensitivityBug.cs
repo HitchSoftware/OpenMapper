@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Bug;
-public class EnumCaseSensitivityBug : AutoMapperSpecBase
+﻿namespace OpenMapper.UnitTests.Bug;
+public class EnumCaseSensitivityBug : OpenMapperSpecBase
 {
     private SecondEnum _resultSecondEnum;
     private FirstEnum _resultFirstEnum;

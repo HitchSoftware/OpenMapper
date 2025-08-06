@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class DuplicateExtensionMethods : AutoMapperSpecBase
+public class DuplicateExtensionMethods : OpenMapperSpecBase
 {
     public class Outlay
     {

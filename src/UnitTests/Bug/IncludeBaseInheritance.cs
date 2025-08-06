@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class IncludeBaseInheritance : AutoMapperSpecBase
+public class IncludeBaseInheritance : OpenMapperSpecBase
 {
     DestinationLevel2 _destination;
 

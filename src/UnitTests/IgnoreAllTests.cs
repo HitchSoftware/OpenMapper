@@ -1,6 +1,6 @@
-namespace AutoMapper.UnitTests;
+namespace OpenMapper.UnitTests;
 
-public class When_overriding_global_ignore : AutoMapperSpecBase
+public class When_overriding_global_ignore : OpenMapperSpecBase
 {
     Destination _destination;
 

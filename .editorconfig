@@ -89,6 +89,10 @@ dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion
 csharp_style_prefer_primary_constructors = true:suggestion
 csharp_prefer_system_threading_lock = true:suggestion
 csharp_space_after_keywords_in_control_flow_statements = true
+dotnet_style_collection_initializer = true:suggestion
+dotnet_style_prefer_simplified_boolean_expressions = true:suggestion
+dotnet_style_prefer_conditional_expression_over_assignment = true:silent
+dotnet_style_prefer_conditional_expression_over_return = true:silent
 
 [*.xml]
 indent_size = 2

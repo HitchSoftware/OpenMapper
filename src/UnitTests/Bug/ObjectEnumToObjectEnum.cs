@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class ObjectEnumToObjectEnum : AutoMapperSpecBase
+public class ObjectEnumToObjectEnum : OpenMapperSpecBase
 {
     Target _target;
 

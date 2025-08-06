@@ -1,9 +1,9 @@
-﻿using AutoMapper;
+﻿using OpenMapper;
 using Microsoft.Extensions.DependencyInjection;
 
 IServiceCollection services = new ServiceCollection();
 services.AddTransient<ISomeService>(sp => new FooService(5));
-services.AddAutoMapper(typeof(Source));
+services.AddOpenMapper(typeof(Source));
 var provider = services.BuildServiceProvider();
 using (var scope = provider.CreateScope())
 {

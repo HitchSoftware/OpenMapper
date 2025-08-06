@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class SubclassMappings : AutoMapperSpecBase
+public class SubclassMappings : OpenMapperSpecBase
 {
     public class Source
     {

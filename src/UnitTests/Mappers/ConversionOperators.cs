@@ -1,4 +1,4 @@
-namespace AutoMapper.UnitTests;
+namespace OpenMapper.UnitTests;
 
 public class Nullable_conversion_operator : NonValidatingSpecBase
 {

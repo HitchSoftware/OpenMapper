@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests.MappingInheritance;
+﻿namespace OpenMapper.UnitTests.MappingInheritance;
 public class ReverseMapWithInclude : NonValidatingSpecBase
 {
     public class Duck : Animal { }
@@ -27,7 +27,7 @@ public class ReverseMapWithInclude : NonValidatingSpecBase
     }
 }
 
-public class ReverseMapWithIncludeBase : AutoMapperSpecBase
+public class ReverseMapWithIncludeBase : OpenMapperSpecBase
 {
     ConcreteSource _destination;
 

@@ -1,8 +1,8 @@
-namespace AutoMapper.UnitTests
+namespace OpenMapper.UnitTests
 {
     namespace NestedContainers
     {
-        public class When_specifying_a_custom_contextual_constructor : AutoMapperSpecBase
+        public class When_specifying_a_custom_contextual_constructor : OpenMapperSpecBase
         {
             private Dest _dest;
 
@@ -72,7 +72,7 @@ namespace AutoMapper.UnitTests
             }
         }
 
-        public class When_specifying_a_custom_contextual_constructor_for_type_converters : AutoMapperSpecBase
+        public class When_specifying_a_custom_contextual_constructor_for_type_converters : OpenMapperSpecBase
         {
             private Dest _dest;
 

@@ -1,4 +1,4 @@
-﻿namespace AutoMapper.UnitTests
+﻿namespace OpenMapper.UnitTests
 {
     namespace Source
     {
@@ -69,7 +69,7 @@
         }
     }
 
-    public class PreserveReferencesWithInheritance : AutoMapperSpecBase
+    public class PreserveReferencesWithInheritance : OpenMapperSpecBase
     {
         List<Target.Member> _destination;
 

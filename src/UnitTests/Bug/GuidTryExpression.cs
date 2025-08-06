@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class GuidTryExpression : AutoMapperSpecBase
+public class GuidTryExpression : OpenMapperSpecBase
 {
     private Destination _destination;
     private Guid _value = Guid.NewGuid();

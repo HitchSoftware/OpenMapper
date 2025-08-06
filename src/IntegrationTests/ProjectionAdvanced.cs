@@ -1,4 +1,15 @@
-﻿namespace AutoMapper.IntegrationTests;
+﻿using OpenMapper.UnitTests;
+
+namespace OpenMapper.IntegrationTests;
+
+static class ProjectionAdvancedExtensions
+{
+    public static IMappingExpression<TSource, TDestination> Advanced<TSource, TDestination>(
+        this IProjectionExpression<TSource, TDestination> projection) =>
+        (IMappingExpression<TSource, TDestination>)projection;
+}
+
+
 public class ProjectionAdvanced : IntegrationTest<ProjectionAdvanced.Initializer>
 {
     protected override MapperConfiguration CreateConfiguration() => new(c => c.CreateProjection<Entity, Dto>().Advanced().ForAllMembers(o=>o.Ignore()));

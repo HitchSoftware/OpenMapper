@@ -1,5 +1,5 @@
-namespace AutoMapper.UnitTests.NullBehavior;
-public class NullDestinationType : AutoMapperSpecBase
+namespace OpenMapper.UnitTests.NullBehavior;
+public class NullDestinationType : OpenMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(c => { });
     [Fact]
@@ -15,7 +15,7 @@ public class NullDestinationType : AutoMapperSpecBase
         Mapper.Map("", default(string), _ => { }).ShouldBe("");
     }
 }
-public class NullToExistingDestination : AutoMapperSpecBase
+public class NullToExistingDestination : OpenMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(c => c.CreateMap<string, string>().DisableCtorValidation());
     [Fact]
@@ -25,7 +25,7 @@ public class NullToExistingDestination : AutoMapperSpecBase
         Mapper.Map(default(string), destination).ShouldBeSameAs(destination);
     }
 }
-public class NullToExistingValue : AutoMapperSpecBase
+public class NullToExistingValue : OpenMapperSpecBase
 {
     private record Person
     {
@@ -55,7 +55,7 @@ public class NullToExistingValue : AutoMapperSpecBase
     [Fact]
     public void Should_overwrite() => Mapper.Map(new PersonModel(), new Person()).TheAddress.ShouldBeNull();
 }
-public class NullCheckDefault : AutoMapperSpecBase
+public class NullCheckDefault : OpenMapperSpecBase
 {
     class Source
     {
@@ -70,7 +70,7 @@ public class NullCheckDefault : AutoMapperSpecBase
     [Fact]
     public void Should_be_default() => Map<Destination>(new Source()).Length.ShouldBe(0);
 }
-public class When_mappping_null_with_DoNotAllowNull : AutoMapperSpecBase
+public class When_mappping_null_with_DoNotAllowNull : OpenMapperSpecBase
 {
     class Source
     {
@@ -105,7 +105,7 @@ public class When_mappping_null_with_DoNotAllowNull : AutoMapperSpecBase
         destination.Inner.ShouldNotBeNull();
     }
 }
-public class When_mappping_null_with_AllowNull : AutoMapperSpecBase
+public class When_mappping_null_with_AllowNull : OpenMapperSpecBase
 {
     class Source
     {
@@ -140,7 +140,7 @@ public class When_mappping_null_with_AllowNull : AutoMapperSpecBase
         destination.Inner.ShouldBeNull();
     }
 }
-public class When_mappping_null_with_AllowNull_and_inheritance : AutoMapperSpecBase
+public class When_mappping_null_with_AllowNull_and_inheritance : OpenMapperSpecBase
 {
     class Source
     {
@@ -182,7 +182,7 @@ public class When_mappping_null_with_AllowNull_and_inheritance : AutoMapperSpecB
         destination.Inner.ShouldBeNull();
     }
 }
-public class When_mappping_null_with_DoNotAllowNull_and_inheritance : AutoMapperSpecBase
+public class When_mappping_null_with_DoNotAllowNull_and_inheritance : OpenMapperSpecBase
 {
     class Source
     {
@@ -224,7 +224,7 @@ public class When_mappping_null_with_DoNotAllowNull_and_inheritance : AutoMapper
         destination.Inner.ShouldNotBeNull();
     }
 }
-public class When_mappping_null_collection_with_AllowNullCollections_false : AutoMapperSpecBase
+public class When_mappping_null_collection_with_AllowNullCollections_false : OpenMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg => {});
 
@@ -236,7 +236,7 @@ public class When_mappping_null_collection_with_AllowNullCollections_false : Aut
     }
 }
 
-public class When_mappping_null_collection_with_AllowNullCollections_true : AutoMapperSpecBase
+public class When_mappping_null_collection_with_AllowNullCollections_true : OpenMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() => new(cfg => cfg.AllowNullCollections = true);
 
@@ -248,7 +248,7 @@ public class When_mappping_null_collection_with_AllowNullCollections_true : Auto
     }
 }
 
-public class When_mappping_null_array_with_AllowNullDestinationValues_false : AutoMapperSpecBase
+public class When_mappping_null_array_with_AllowNullDestinationValues_false : OpenMapperSpecBase
 {
     class Source
     {
@@ -270,7 +270,7 @@ public class When_mappping_null_array_with_AllowNullDestinationValues_false : Au
     public void Should_map_to_non_null() => Mapper.Map<Destination>(new Source()).Collection.ShouldNotBeNull();
 }
 
-public class When_mappping_null_array_to_IEnumerable_with_MapAtRuntime : AutoMapperSpecBase
+public class When_mappping_null_array_to_IEnumerable_with_MapAtRuntime : OpenMapperSpecBase
 {
     class Source
     {
@@ -291,7 +291,7 @@ public class When_mappping_null_array_to_IEnumerable_with_MapAtRuntime : AutoMap
     }
 }
 
-public class When_mappping_null_array_to_IEnumerable : AutoMapperSpecBase
+public class When_mappping_null_array_to_IEnumerable : OpenMapperSpecBase
 {
     class Source
     {
@@ -312,7 +312,7 @@ public class When_mappping_null_array_to_IEnumerable : AutoMapperSpecBase
     }
 }
 
-public class When_mappping_null_list_to_ICollection : AutoMapperSpecBase
+public class When_mappping_null_list_to_ICollection : OpenMapperSpecBase
 {
     class Source
     {
@@ -333,7 +333,7 @@ public class When_mappping_null_list_to_ICollection : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_untyped_null_to_IEnumerable_and_AllowNullCollections_is_true : AutoMapperSpecBase
+public class When_mapping_untyped_null_to_IEnumerable_and_AllowNullCollections_is_true : OpenMapperSpecBase
 {
     class Source
     {
@@ -358,7 +358,7 @@ public class When_mapping_untyped_null_to_IEnumerable_and_AllowNullCollections_i
     }
 }
 
-public class When_mapping_from_null_interface_and_AllowNullDestinationValues_is_false : AutoMapperSpecBase
+public class When_mapping_from_null_interface_and_AllowNullDestinationValues_is_false : OpenMapperSpecBase
 {
     ElementDestination _destination;
 
@@ -405,7 +405,7 @@ public class When_mapping_from_null_interface_and_AllowNullDestinationValues_is_
     }
 }
 
-public class When_mapping_from_null_interface : AutoMapperSpecBase
+public class When_mapping_from_null_interface : OpenMapperSpecBase
 {
     ElementDestination _destination;
 
@@ -451,7 +451,7 @@ public class When_mapping_from_null_interface : AutoMapperSpecBase
     }
 }
 
-public class When_mapping_a_model_with_null_items : AutoMapperSpecBase
+public class When_mapping_a_model_with_null_items : OpenMapperSpecBase
 {
     private ModelDto _result;
 
@@ -531,7 +531,7 @@ public class When_mapping_a_model_with_null_items : AutoMapperSpecBase
     }
 }
 
-public class When_overriding_null_behavior_with_null_source_items : AutoMapperSpecBase
+public class When_overriding_null_behavior_with_null_source_items : OpenMapperSpecBase
 {
     private ModelDto _result;
 
@@ -623,7 +623,7 @@ public class When_overriding_null_behavior_with_null_source_items : AutoMapperSp
     }
 }
 
-public class When_overriding_null_behavior_in_sub_profile : AutoMapperSpecBase
+public class When_overriding_null_behavior_in_sub_profile : OpenMapperSpecBase
 {
     private ModelDto _result;
 
@@ -719,7 +719,7 @@ public class When_overriding_null_behavior_in_sub_profile : AutoMapperSpecBase
     }
 }
 
-public class When_overriding_null_behavior_in_a_profile : AutoMapperSpecBase
+public class When_overriding_null_behavior_in_a_profile : OpenMapperSpecBase
 {
     private DefaultDestination _defaultResult;
     private NullDestination _nullResult;
@@ -817,7 +817,7 @@ public class When_using_a_custom_resolver_and_the_source_value_is_null : NonVali
     }
 }
 
-public class When_mapping_using_a_custom_member_mapping_and_source_is_null : AutoMapperSpecBase
+public class When_mapping_using_a_custom_member_mapping_and_source_is_null : OpenMapperSpecBase
 {
     private Dest _dest;
 
@@ -855,7 +855,7 @@ public class When_mapping_using_a_custom_member_mapping_and_source_is_null : Aut
     }
 }
 
-public class When_specifying_a_resolver_for_a_nullable_type : AutoMapperSpecBase
+public class When_specifying_a_resolver_for_a_nullable_type : OpenMapperSpecBase
 {
     private FooViewModel _result;
 
@@ -904,7 +904,7 @@ public class When_specifying_a_resolver_for_a_nullable_type : AutoMapperSpecBase
     }
 }
 
-public class When_overriding_collection_null_behavior : AutoMapperSpecBase
+public class When_overriding_collection_null_behavior : OpenMapperSpecBase
 {
     private Dest _dest;
 
@@ -976,7 +976,7 @@ public class When_overriding_collection_null_behavior : AutoMapperSpecBase
     }
 }
 
-public class When_overriding_collection_null_behavior_in_profile_with_MapAtRuntime : AutoMapperSpecBase
+public class When_overriding_collection_null_behavior_in_profile_with_MapAtRuntime : OpenMapperSpecBase
 {
     private Dest _dest;
 
@@ -1059,7 +1059,7 @@ public class When_overriding_collection_null_behavior_in_profile_with_MapAtRunti
     }
 }
 
-public class When_overriding_collection_null_behavior_in_profile : AutoMapperSpecBase
+public class When_overriding_collection_null_behavior_in_profile : OpenMapperSpecBase
 {
     private Dest _dest;
 
@@ -1142,7 +1142,7 @@ public class When_overriding_collection_null_behavior_in_profile : AutoMapperSpe
     }
 }
 
-public class When_mapping_a_null_model : AutoMapperSpecBase
+public class When_mapping_a_null_model : OpenMapperSpecBase
 {
     public class ModelDto
     {

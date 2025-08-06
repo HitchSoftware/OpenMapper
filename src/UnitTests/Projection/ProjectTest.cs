@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Projection;
-public class ProjectWithFields : AutoMapperSpecBase
+﻿namespace OpenMapper.UnitTests.Projection;
+public class ProjectWithFields : OpenMapperSpecBase
 {
     public class Foo
     {

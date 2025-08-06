@@ -1,4 +1,6 @@
-﻿namespace AutoMapper.IntegrationTests.CustomMapFrom;
+﻿using OpenMapper.UnitTests;
+
+namespace OpenMapper.IntegrationTests.CustomMapFrom;
 public class MultipleLevelsSubquery : IntegrationTest<MultipleLevelsSubquery.DatabaseInitializer>
 {
     [Fact]

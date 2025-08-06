@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests;
+﻿namespace OpenMapper.UnitTests;
 
-public class InheritForPath : AutoMapperSpecBase
+public class InheritForPath : OpenMapperSpecBase
 {
     public class RootModel
     {
@@ -61,7 +61,7 @@ public class InheritForPath : AutoMapperSpecBase
     }
 }
 
-public class ForPath : AutoMapperSpecBase
+public class ForPath : OpenMapperSpecBase
 {
     public class Order
     {
@@ -102,7 +102,7 @@ public class ForPath : AutoMapperSpecBase
     }
 }
 
-public class ForPathWithoutSettersForSubObjects : AutoMapperSpecBase
+public class ForPathWithoutSettersForSubObjects : OpenMapperSpecBase
 {
     public class Order
     {
@@ -136,12 +136,12 @@ public class ForPathWithoutSettersForSubObjects : AutoMapperSpecBase
     [Fact]
     public void Should_unflatten()
     {
-        new Action(() => Mapper.Map<Order>(new OrderDto())).ShouldThrowException<AutoMapperMappingException>(ex =>
+        new Action(() => Mapper.Map<Order>(new OrderDto())).ShouldThrowException<OpenMapperMappingException>(ex =>
               ex.InnerException?.Message.ShouldBe("typeMapDestination.CustomerHolder.Customer cannot be null because it's used by ForPath."));
     }
 }
 
-public class ForPathWithoutSettersShouldBehaveAsForMember : AutoMapperSpecBase
+public class ForPathWithoutSettersShouldBehaveAsForMember : OpenMapperSpecBase
 {
     public class Order
     {
@@ -185,7 +185,7 @@ public class ForPathWithoutSettersShouldBehaveAsForMember : AutoMapperSpecBase
     }
 }
 
-public class ForPathWithIgnoreShouldNotSetValue : AutoMapperSpecBase
+public class ForPathWithIgnoreShouldNotSetValue : OpenMapperSpecBase
 {
     public partial class TimesheetModel
     {
@@ -264,7 +264,7 @@ public class ForPathWithNullExpressionShouldFail
     }
 }
 
-public class ForPathWithPrivateSetters : AutoMapperSpecBase
+public class ForPathWithPrivateSetters : OpenMapperSpecBase
 {
     public class Order
     {
@@ -305,7 +305,7 @@ public class ForPathWithPrivateSetters : AutoMapperSpecBase
     }
 }
 
-public class ForPathWithValueTypesAndFields : AutoMapperSpecBase
+public class ForPathWithValueTypesAndFields : OpenMapperSpecBase
 {
     public struct Order
     {
@@ -346,7 +346,7 @@ public class ForPathWithValueTypesAndFields : AutoMapperSpecBase
     }
 }
 
-public class ForPathWithConditions : AutoMapperSpecBase
+public class ForPathWithConditions : OpenMapperSpecBase
 {
     public class Order
     {

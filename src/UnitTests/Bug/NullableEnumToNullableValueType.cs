@@ -1,8 +1,8 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
 public class NullableEnumToNullableValueType
 {
-    public class CannotConvertEnumToNullableWhenPassedNull : AutoMapperSpecBase
+    public class CannotConvertEnumToNullableWhenPassedNull : OpenMapperSpecBase
     {
         public enum DummyTypes : int
         {

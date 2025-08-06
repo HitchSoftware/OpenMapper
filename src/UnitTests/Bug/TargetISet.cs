@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class TargetISet : AutoMapperSpecBase
+public class TargetISet : OpenMapperSpecBase
 {
     Destination _destination;
     string[] _items = new[] { "one", "two", "three" };

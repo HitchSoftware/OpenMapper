@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class AllowNullCollectionsAssignableArray : AutoMapperSpecBase
+public class AllowNullCollectionsAssignableArray : OpenMapperSpecBase
 {
     private Destination _destination;
 

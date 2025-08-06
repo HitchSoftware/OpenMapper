@@ -1,4 +1,6 @@
-﻿namespace AutoMapper.IntegrationTests;
+﻿using OpenMapper.UnitTests;
+
+namespace OpenMapper.IntegrationTests;
 
 public class IncludeMembers : IntegrationTest<IncludeMembers.DatabaseInitializer>
 {

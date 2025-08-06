@@ -1,8 +1,8 @@
-﻿using AutoMapper.Internal.Mappers;
+﻿using OpenMapper.Internal.Mappers;
 
-namespace AutoMapper.UnitTests.Bug;
+namespace OpenMapper.UnitTests.Bug;
 
-public class MultidimensionalArrays : AutoMapperSpecBase
+public class MultidimensionalArrays : OpenMapperSpecBase
 {
     const int SomeValue = 154;
     Source _e = new Source(SomeValue);

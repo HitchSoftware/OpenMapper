@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.Bug;
+﻿namespace OpenMapper.UnitTests.Bug;
 
-public class AfterMapNestedObjects : AutoMapperSpecBase
+public class AfterMapNestedObjects : OpenMapperSpecBase
 {
     bool _afterMapCalled;
 

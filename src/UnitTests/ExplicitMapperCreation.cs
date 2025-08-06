@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests;
-public class ExplicitMapperCreation : AutoMapperSpecBase
+﻿namespace OpenMapper.UnitTests;
+public class ExplicitMapperCreation : OpenMapperSpecBase
 {
     protected override MapperConfiguration CreateConfiguration() =>new(cfg => cfg.CreateMap<Source, Dest>());
     public class Source

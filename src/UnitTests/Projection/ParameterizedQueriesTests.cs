@@ -1,5 +1,5 @@
-﻿namespace AutoMapper.UnitTests.Projection;
-public class ParameterizedQueriesTests_with_anonymous_object_and_factory : AutoMapperSpecBase
+﻿namespace OpenMapper.UnitTests.Projection;
+public class ParameterizedQueriesTests_with_anonymous_object_and_factory : OpenMapperSpecBase
 {
     private Dest[] _dests;
     private IQueryable<Source> _sources;
@@ -47,7 +47,7 @@ public class ParameterizedQueriesTests_with_anonymous_object_and_factory : AutoM
     }
 }
 
-public class ParameterizedQueriesTests_with_anonymous_object : AutoMapperSpecBase
+public class ParameterizedQueriesTests_with_anonymous_object : OpenMapperSpecBase
 {
     private Dest[] _dests;
     private IQueryable<Source> _sources;
@@ -95,7 +95,7 @@ public class ParameterizedQueriesTests_with_anonymous_object : AutoMapperSpecBas
     }
 }
 
-public class ParameterizedQueriesTests_with_dictionary_object : AutoMapperSpecBase
+public class ParameterizedQueriesTests_with_dictionary_object : OpenMapperSpecBase
 {
     private Dest[] _dests;
     private IQueryable<Source> _sources;
@@ -143,7 +143,7 @@ public class ParameterizedQueriesTests_with_dictionary_object : AutoMapperSpecBa
     }  
 }
 
-public class ParameterizedQueriesTests_with_filter : AutoMapperSpecBase
+public class ParameterizedQueriesTests_with_filter : OpenMapperSpecBase
 {
     public class User
     {

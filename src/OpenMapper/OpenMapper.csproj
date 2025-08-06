@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Summary>An open-source, AI-maintained object-object mapper for .NET</Summary>
+    <Description>An open-source, AI-maintained object-object mapper for .NET</Description>
+    <TargetFramework>net8.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    
+    <!-- Rename AssemblyName -->
+    <AssemblyName>OpenMapper</AssemblyName>
+
+    <!-- Keep SNK if needed for strong naming -->
+    <!--<AssemblyOriginatorKeyFile>..\..\OpenMapper.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>-->
+
+    <!-- Rename PackageId -->
+    <PackageId>OpenMapper</PackageId>
+    
+    <!-- Reuse icon.png or update later -->
+    <PackageIcon>icon.png</PackageIcon>
+    
+    <!-- Update project homepage -->
+    <PackageProjectUrl>https://github.com/HitchSoftware/OpenMapper</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+
+    <!-- Preserve release tagging -->
+    <MinVerDefaultPreReleaseIdentifiers>preview.0</MinVerDefaultPreReleaseIdentifiers>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+    <!-- OSS metadata -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+
+    <!-- API compatibility checks -->
+    <BaselineAllAPICompatError>true</BaselineAllAPICompatError>
+    <AdditionalApiCompatOptions>--exclude-non-browsable --exclude-compiler-generated</AdditionalApiCompatOptions>
+  </PropertyGroup>
+
+  <!-- Remove AutoMapper binary compatibility unless you plan to preserve binary-level compatibility -->
+  <!-- Alternatively, update this path once you rename the legacy binary -->
+  <ItemGroup>
+    <ResolvedMatchingContract Include="..\LastMajorVersionBinary\OpenMapper.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\icon.png" Pack="true" PackagePath="" Visible="False" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="" Visible="False" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0" />
+    <PackageReference Include="MinVer" Version="6.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    
+  </ItemGroup>
+
+  <Target Name="PreBuild" AfterTargets="GetAssemblyVersion">
+    <Exec Condition=" '$(OS)' == 'Windows_NT' " Command="powershell -ExecutionPolicy Unrestricted -File &quot;$(ProjectDir)ApiCompat\PreBuild.ps1&quot; -version $(Version)" />
+    <Exec Condition=" '$(OS)' != 'Windows_NT' " Command="&quot;$(ProjectDir)ApiCompat/PreBuild.sh&quot; $(Version)" />
+  </Target>
+
+  <!-- Critical: Update namespace usages here -->
+  <ItemGroup>
+    <Using Include="System.Linq.Expressions.Expression" Static="true" />
+    <Using Include="OpenMapper.Execution.ExpressionBuilder" Static="true" />
+    <Using Include="OpenMapper.Execution" />
+    <Using Include="OpenMapper.Configuration" />
+  </ItemGroup>
+</Project>

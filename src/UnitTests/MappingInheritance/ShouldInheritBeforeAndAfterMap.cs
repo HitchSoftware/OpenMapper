@@ -1,6 +1,6 @@
-﻿namespace AutoMapper.UnitTests.MappingInheritance;
+﻿namespace OpenMapper.UnitTests.MappingInheritance;
 
-public class ShouldInheritBeforeAndAfterMapOnlyOnce : AutoMapperSpecBase
+public class ShouldInheritBeforeAndAfterMapOnlyOnce : OpenMapperSpecBase
 {
     int afterMapCount;
     int beforeMapCount;
@@ -38,7 +38,7 @@ public class ShouldInheritBeforeAndAfterMapOnlyOnce : AutoMapperSpecBase
     }
 }
 
-public class ShouldInheritBeforeAndAfterMapOnlyOnceIncludeBase : AutoMapperSpecBase
+public class ShouldInheritBeforeAndAfterMapOnlyOnceIncludeBase : OpenMapperSpecBase
 {
     int afterMapCount;
     int beforeMapCount;
