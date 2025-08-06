@@ -29,12 +29,12 @@ steps:
         <?xml version="1.0" encoding="utf-8"?>
         <configuration>
           <packageSources>
-            <add key="hitchsoftware" value="$NUGET_SOURCE" />
+            <add key="hitchsoftware" value="$$NUGET_SOURCE" />
           </packageSources>
           <packageSourceCredentials>
             <hitchsoftware>
               <add key="Username" value="AzureDevOps" />
-              <add key="ClearTextPassword" value="$NUGET_API_KEY" />
+              <add key="ClearTextPassword" value="$$NUGET_API_KEY" />
             </hitchsoftware>
           </packageSourceCredentials>
         </configuration>
