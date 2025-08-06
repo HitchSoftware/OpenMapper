@@ -40,6 +40,12 @@ steps:
         </configuration>
         EOF
 
+  # 0.5) Restore using dynamic config
+  - name: 'bash'
+    id: 'tell-us-about-it'
+    entrypoint: 'cat'
+    args: ['.nuget/nuget.config']
+
   # 1) Restore using dynamic config
   - name: 'mcr.microsoft.com/dotnet/sdk:9.0'
     entrypoint: 'dotnet'
